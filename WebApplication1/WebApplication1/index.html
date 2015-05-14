@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+<!-- JS - AKCJA NA NAJECHANIU KURSOREM-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+         <script type="text/javascript">
+           $(document).ready(function(){
+            $("img:eq(0)").bind('mouseenter',function(){
+             $(this).animate({opacity: 1, width: '300px', height: '400px'},"slow");
+                                                       });
+
+             $("img:eq(0)").bind('mouseleave',function(){
+              $(this).animate({opacity: 0.7, width: '200px', height: '282px'},"slow");
+                                                      });
+
+                                     });
+        </script>
+<!-- WSTAWIENIE TŁA -->
+    </head>
+    <body style="background: url(Element_seal.jpg) no-repeat; 
+            background-size: 100%;">
+
+    <style>
+        h1 {text-align:center;color: blue;}       
+        #div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9, #div10, #div11, #div12
+        {float:left; width:200px; height:282px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+    </style>
+        <!-- FUNKCJA ŁAPANIA I UPUSZCZANIA -->
+        <script> 
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+</script>
+            <h1>GRA NARUTO</h1>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="Gaara_full_body.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="282">
+</div>
+
+<!-- DEFINIUJE POLA (możemy to zrobić funkcją, żeby ograniczyć ilość kodu) -->
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+        <footer>
+            <div style="position: absolute; bottom: 0px;">
+                Obrazki zaczerpniete ze strony: <a href="http://naruto.wikia.com/wiki/Narutopedia">naruto.wikia.com</a></div>
+        </footer>
+    </body>
+</html>
+
+<!--
+    1.GAARA
+    2.NARUTO
+    3.NEJI
+    4.KABUTO
+    5.OROCHIMARU
+    6.TSUNADE
+    7.NAGATO // TENDO PAIN
+    8.SHIZUNE
+    9.ITACHI
+    10.SHIKAMARU
+    11.KIBA
+    12.JIRAYA
+    13.SAKURA
+    14.HINATA
+    15.TENTEN
+    16.KAKASHI
+    17.ROCK LEE
+    18.KUSHINA
+    19.HASHIRAMA
+    20.SASORI
+    21.SASUKE
+    22.YAMATO
+    23.RIN
+    24.ASUMA
+    25. - PUSTE
+-->
